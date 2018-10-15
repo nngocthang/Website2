@@ -238,42 +238,104 @@
 
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div class="col-lg-12">
-                                <div class="col-lg-6 text-center">
+                            <div class="text-center">
+                                <div class="row">
                                     <img class="profile_img" src="../images/avatar.png">
+                                </div>
+                                <div class="row">
                                     <button class="btn_changeAvatar"><i class="fa fa-user"></i>Change avatar</button>
                                 </div>
-                                <div class="col-lg-6">
-                                    <form role="form">
-                                        <div class="form-group">
-                                            <label>ID:</label>
-                                            <input class="form-control" id="txtid" readonly>
+                            </div>
+                            <form role="form">
+                                <div class="form-group">
+                                    <label>ID:</label>
+                                    <input class="form-control" id="txtid" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>Name:</label>
+                                    <input class="form-control" id="txtname">
+                                </div>
+                                <div class="form-group">
+                                    <label>Username:</label>
+                                    <input class="form-control" id="txtusername">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email:</label>
+                                    <input class="form-control" id="txtemail">
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone:</label>
+                                    <input class="form-control" id="txtaddress">
+                                </div>
+                                <div class="form-group">
+                                    <label>Website:</label>
+                                    <input class="form-control" id="txtWebsite">
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <label>Address:</label>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-lg-12">
+                                            <label>City:</label>
+                                            <input class="form-control" id="txtCity">
                                         </div>
-                                        <div class="form-group">
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-lg-12">
+                                            <label>Street:</label>
+                                            <input class="form-control" id="txtStreet">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-lg-8">
+                                            <label>Suite:</label>
+                                            <input class="form-control" id="txtSuite">
+                                        </div>
+                                        <div class="form-group col-lg-4">
+                                            <label>Zipcode:</label>
+                                            <input class="form-control" id="txtZipcode">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <label>GEO:</label>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-lg-6">
+                                            <label>Latitude:</label>
+                                            <input class="form-control" id="txtLat">
+                                        </div>
+                                        <div class="form-group col-lg-6">
+                                            <label>Longitude:</label>
+                                            <input class="form-control" id="txtLng">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <label>Company:</label>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-lg-12">
                                             <label>Name:</label>
-                                            <input class="form-control" id="txtname" readonly>
+                                            <input class="form-control" id="txtComName">
                                         </div>
-                                        <div class="form-group">
-                                            <label>Username:</label>
-                                            <input class="form-control" id="txtusername" readonly>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-lg-12">
+                                            <label>catchPhrase:</label>
+                                            <input class="form-control" id="txtComCP">
                                         </div>
-                                        <div class="form-group">
-                                            <label>Email:</label>
-                                            <input class="form-control" id="txtemail" readonly>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-lg-12">
+                                            <label>bs:</label>
+                                            <input class="form-control" id="txtComBs">
                                         </div>
-                                        <div class="form-group">
-                                            <label>Phone:</label>
-                                            <input class="form-control" id="txtaddress" readonly>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Website:</label>
-                                            <input class="form-control" id="txtWebsite" readonly>
-                                        </div>
-                                    </form>
-
+                                    </div>
 
                                 </div>
-                            </div>
+                            </form>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -328,6 +390,15 @@
             $('#txtemail').val(user.email);
             $('#txtaddress').val(user.phone);
             $('#txtWebsite').val(user.website);
+            $('#txtCity').val(user.address.city);
+            $('#txtStreet').val(user.address.street);
+            $('#txtSuite').val(user.address.suite);
+            $('#txtZipcode').val(user.address.zipcode);
+            $('#txtLat').val(user.address.geo.lat);
+            $('#txtLng').val(user.address.geo.lng);
+            $('#txtComName').val(user.company.name);
+            $('#txtComCP').val(user.company.catchPhrase);
+            $('#txtComBs').val(user.company.bs);
         }
         function getUrlParameter(name) {
             name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
