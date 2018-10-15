@@ -291,9 +291,9 @@
         var dt;
         $(document).ready(function () {
             const url = "https://jsonplaceholder.typicode.com/users";
-            const baseUrl = 'file:///C:/ThangNN/WS/Website2/pages/';
-            const avatar = '<img class="avatar_img" src="../images/avatar.png">';
-            var detailPage = baseUrl + 'UserDetail.html';
+            const baseUrl = document.location.pathname;
+            const avatar = '<img class="avatar_img" src="https://btia.org/wp-content/uploads/2017/03/avatarDefault.png">';
+            var detailPage = baseUrl.replace('Users','UserDetail');
             var dt = null;
             fetch(
                 url, { method: "GET" }
