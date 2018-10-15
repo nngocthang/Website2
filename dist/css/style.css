@@ -5,16 +5,20 @@
     background-color: #ffffff;
 }
 .profile_img{
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
+    height: 360px;
+    width: 360px;
+    border-radius: 180px;
     background-color: #808080;
 }
 .btn_changeAvatar{
     height: 30px;
-    width: 100%;
+    width: 120px;
     margin-top: 15px;
     margin-bottom: 15px;
     border-radius: 10px;
     background-color: coral;
+    color: #ffffff;
+}
+.addressInput{
+    margin-left: 35px;
 }
