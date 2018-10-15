@@ -291,7 +291,8 @@
         var dt;
         $(document).ready(function () {
             const url = "https://jsonplaceholder.typicode.com/users";
-            const currentUrl = 'file:///C:/ThangNN/WS/Website2/pages/UserDetail.html';
+            const baseUrl = 'file:///C:/ThangNN/WS/Website2/pages/';
+            var detailPage = baseUrl + 'UserDetail.html';
             var dt = null;
             fetch(
                 url, { method: "GET" }
@@ -299,7 +300,7 @@
                 .then(data => {
                     $.each(data, function (index, item) {
                         var row = $('<tr></tr>');
-                        row.append('<td><a href="' + currentUrl + '?id=' + item.id + '"><img class="avatar_img" src="../images/avatar.png">' + item.name + '</a></td>');
+                        row.append('<td><a href="' + detailPage + '?id=' + item.id + '"><img class="avatar_img" src="../images/avatar.png">' + item.name + '</a></td>');
                         row.append('<td>' + item.username + '</td>');
                         row.append('<td>' + item.email + '</td>');
                         row.append('<td>' + item.address.city + '</td>');
