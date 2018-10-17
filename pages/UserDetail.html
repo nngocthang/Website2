@@ -243,7 +243,8 @@
                                     <img class="profile_img" src="https://btia.org/wp-content/uploads/2017/03/avatarDefault.png">
                                 </div>
                                 <div class="row">
-                                    <button class="btn_changeAvatar"><i class="fa fa-user"></i>Change avatar</button>
+                                    <button class="btn_changeAvatar" data-toggle="modal" data-target="#changeAvatarModal"><i
+                                            class="fa fa-user"></i> Change avatar</button>
                                 </div>
                             </div>
                             <form role="form">
@@ -310,6 +311,8 @@
                                             <input class="form-control" id="txtLng">
                                         </div>
                                     </div>
+                                    <div class="form-row subAtribute" id="map">
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-row">
@@ -348,7 +351,22 @@
 
     </div>
     <!-- /#wrapper -->
-
+    <div class="modal" id="changeAvatarModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <input id="avatar-1" name="avatar-1" type="file">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Save</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- jQuery -->
     <script src="../vendor/jquery/jquery.min.js"></script>
 
