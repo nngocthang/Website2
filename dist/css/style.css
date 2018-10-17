@@ -11,14 +11,26 @@
     background-color: #808080;
 }
 .btn_changeAvatar{
-    height: 30px;
-    width: 120px;
+    height: 40px;
+    width: 180px;
     margin-top: 15px;
     margin-bottom: 15px;
     border-radius: 10px;
-    background-color: coral;
+    background-color: rgb(248, 98, 43);
     color: #ffffff;
 }
 .subAtribute{
     margin-left: 35px;
+}
+#changeAvatarModal .modal-header{
+    border-block-start: 0px;
+    border-block-end: 0px;
+}
+#changeAvatarModal .modal-body{
+    border-block-start: 0px;
+    border-block-end: 0px;
+}
+#changeAvatarModal .modal-footer{
+    border-block-start: 0px;
+    border-block-end: 0px;
 }
